@@ -1,0 +1,45 @@
+{
+  "name": "copy-promise",
+  "version": "0.0.1",
+  "description": "Filesystem copy method as promises.",
+  "main": "./lib/copy-promise.js",
+  "jsnext:main": "./src/copy-promise.js",
+  "keywords": [
+    "copy",
+    "promise"
+  ],
+  "author": {
+    "name": "Khalil Zhang",
+    "email": "kandmforever@126.com",
+    "url": "https://starandtina.github.io/"
+  },
+  "repository": "https://github.com/starandtina/copy-promise",
+  "license": "MIT",
+  "scripts": {
+    "test": "nyc ava",
+    "build": "babel ./src -d ./lib"
+  },
+  "devDependencies": {
+    "ava": "0.16.0",
+    "babel-cli": "6.18.0",
+    "babel-preset-es2015": "6.18.0",
+    "nyc": "8.3.2"
+  },
+  "dependencies": {
+    "fs-extra": "1.0.0",
+    "fs-promise": "0.5.0"
+  },
+  "ava": {
+    "require": "babel-register",
+    "babel": "inherit"
+  },
+  "nyc": {
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 90,
+    "include": [
+      "src/**/*.js"
+    ]
+  }
+}
